@@ -17,3 +17,24 @@ const calculateSalesTax = function (amount, taxRate) { // creates function that 
 
 calculateSalesTax (100, .07); // inserts the values into the function --- Output: $7
 calculateSalesTax (500, .1); // inserts the values into the function --- Output: $50
+
+// Task 3 - Employee Bonus Calculation
+
+const calculateBonus = (salary, performanceRating) => {
+    let bonusPercentage = 0 
+    if (performanceRating === "Excellent") { // if the performance rating is "Excellent", the bonus percentage is 20%
+    bonusPercentage = .2;
+}
+    if (performanceRating === "Good") { // if the performance rating is "Excellent", the bonus percentage is 10%
+    bonusPercentage = .1;
+} 
+    if (performanceRating === "Average") { // if the performance rating is "Excellent", the bonus percentage is 5%
+    bonusPercentage = .05;
+}
+
+const bonus = salary * bonusPercentage
+return `Bonus: $${bonus}`;
+};
+
+console.log(calculateBonus (5000, "Excellent")); // logs the function and the inputs to the console --- Output: $1000
+console.log(calculateBonus (7000, "Good")); // logs the function and the inputs to the console --- Output: $700
