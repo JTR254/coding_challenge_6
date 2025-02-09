@@ -38,3 +38,24 @@ return `Bonus: $${bonus}`;
 
 console.log(calculateBonus (5000, "Excellent")); // logs the function and the inputs to the console --- Output: $1000
 console.log(calculateBonus (7000, "Good")); // logs the function and the inputs to the console --- Output: $700
+
+// Task 4 - Subscription Pricing Model
+
+function calculateSubsrciptionCost (plan, months, discount = 0) {
+    if (plan === "Basic") { // if the plan is Basic, the cost will be $10 per month
+        planCost = 10;
+    }
+    if (plan === "Premium") { // if the plan is Premium, the cost will be $20 per month
+        planCost = 20;
+    }
+    if (plan === "Enterprise") { // if the plan is Enterprise, the cost will be $50 per month
+        planCost = 50;
+    }
+    const totalCost = planCost * months - discount // this is the equation to determine the total cost
+    return `Total Cost of Plan: $${totalCost}`
+
+};
+
+console.log (calculateSubsrciptionCost ("Basic", 6, 10)); // log the function and the inputs to the console --- Output: $50
+console.log (calculateSubsrciptionCost ("Premium", 12, 0)); // log the function and the inputs to the console --- Output: $240
+
