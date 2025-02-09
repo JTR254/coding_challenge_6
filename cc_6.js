@@ -59,3 +59,12 @@ function calculateSubsrciptionCost (plan, months, discount = 0) {
 console.log (calculateSubsrciptionCost ("Basic", 6, 10)); // log the function and the inputs to the console --- Output: $50
 console.log (calculateSubsrciptionCost ("Premium", 12, 0)); // log the function and the inputs to the console --- Output: $240
 
+// Task 5 - Currency Conversion
+
+function convertCurrency (amount, exchangeRate) { // declares function that converts currency
+   const convertedAmount = amount * exchangeRate
+   return `Converted Amount: $${convertedAmount}`
+};
+
+console.log (convertCurrency (100, 1.1)) // logs function and inputs to the console --- Output: $110.00000000001 for unknown reason
+console.log (convertCurrency (250, .85)) // logs function and inputs to the console --- OUtput: $212.5
