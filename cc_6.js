@@ -100,3 +100,18 @@ let tracker = createExpenseTracker();
 
 console.log(tracker(200)); // logs the function to the console
 console.log(tracker(150)); // logs the function to the console
+
+// Task 8 - Employee Promotion Evaluation
+
+function calculateYearsToPromotion (employeeLevel) { // creates function that says if the employee level is 10 or above, output 0
+    if (employeeLevel >= 10) {
+        return `Years to Level 10: ${0}`;
+    }
+   
+    let years = (10 - employeeLevel) * 2 // equation that calculates how many more years to reach level 10
+   
+    return years;
+};
+
+console.log(`Years to Level 10: ${calculateYearsToPromotion(7)}`) // logs the function to the console --- Output: Years to Level 10: 6
+console.log(`Years to Level 10: ${calculateYearsToPromotion(5)}`) // logs the function to the console --- Output: Years to Level 10: 10
