@@ -68,3 +68,20 @@ function convertCurrency (amount, exchangeRate) { // declares function that conv
 
 console.log (convertCurrency (100, 1.1)) // logs function and inputs to the console --- Output: $110.00000000001 for unknown reason
 console.log (convertCurrency (250, .85)) // logs function and inputs to the console --- OUtput: $212.5
+
+// Task 6 - Higher-Order Function for Bulk Orders
+
+const orders = [450, 350, 600, 300, 600]; // creates an array of multiple orders
+const applyBulkDiscount = (orders, discountFunction) => {
+    return orders.map(discountFunction);
+}; 
+
+let discountedOrders = applyBulkDiscount (orders, amount => {
+    if (amount > 500) { // if the amount is greater than 500, multiply it by .9
+        return amount * .9;
+    } else {
+        return amount; // if the amount is not greater than 500, do not apply a discount
+    }
+});
+
+console.log(`Discounted Orders: ${discountedOrders}`); // logs the discounted orders to the console
